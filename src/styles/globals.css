@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 152 24% 36%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 152 24% 36%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 152 24% 36%;
+
+    --primary: 152 24% 36%;  /* #496954 */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 152 14% 49%; /* #6e8c6e */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 152 32% 82%;
+    --muted-foreground: 152 24% 36%;
+
+    --accent: 152 28% 64%; /* #a9d9a1 */
+    --accent-foreground: 152 24% 36%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 152 28% 64%;
+    --input: 152 28% 64%;
+    --ring: 152 24% 36%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer components {
+  .input-field {
+    @apply mt-1 block w-full rounded-md border-[#a9d9a1]/30 shadow-sm focus:border-[#496954] focus:ring-[#496954];
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 text-sm font-medium text-white bg-[#496954] border border-transparent rounded-md shadow-sm hover:bg-[#344c3d] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#496954];
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 text-sm font-medium text-[#6e8c6e] bg-white border border-[#a9d9a1]/30 rounded-md shadow-sm hover:bg-[#f8faf8];
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-[#a9d9a1]/30;
+  }
+}
+
+@layer utilities {
+  .bg-primary-gradient {
+    background: linear-gradient(to right, #4a6d59, #6e8c73);
+  }
+  
+  .bg-secondary-gradient {
+    background: linear-gradient(to right, #8eb8a3, #b2e1d3);
+  }
+}
+
+/* Custom Color Classes */
+.text-primary-dark {
+  color: #4a6d59;
+}
+
+.text-primary-medium {
+  color: #6e8c73;
+}
+
+.text-primary-light {
+  color: #8eb8a3;
+}
+
+.text-accent-light {
+  color: #b2e1d3;
+}
+
+.text-accent-lighter {
+  color: #d6f5e2;
+}
